@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { BrowserMultiFormatReader, Exception } from "@zxing/library";
+import { Code128Reader, Exception } from "@zxing/library";
 
 export default {
   name: "stream-barcode-reader",
@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       isLoading: true,
-      codeReader: new BrowserMultiFormatReader(),
+      codeReader: new Code128Reader(),
       isMediaStreamAPISupported: navigator && navigator.mediaDevices && "enumerateDevices" in navigator.mediaDevices,
     };
   },
