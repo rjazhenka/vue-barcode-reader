@@ -10,15 +10,17 @@
 
 <script>
 
-import { BrowserBarcodeReader, Exception } from "@zxing/library";
+import { BrowserBarcodeReader, Exception, DecodeHintType } from "@zxing/library";
 
 export default {
   name: "stream-barcode-reader",
 
   data() {
+    let hints = new Map<DecodeHintType, any>();
+
     return {
       isLoading: true,
-      codeReader: new BrowserBarcodeReader(100),
+      codeReader: new BrowserBarcodeReader(100, hints),
       isMediaStreamAPISupported: navigator && navigator.mediaDevices && "enumerateDevices" in navigator.mediaDevices,
     };
   },
