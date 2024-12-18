@@ -11,12 +11,14 @@
 <script>
 
 import { BrowserBarcodeReader, Exception, DecodeHintType } from "@zxing/library";
+let hints = new Map();
+hints.set(DecodeHintType.TRY_HARDER, true)
 
 export default {
   name: "stream-barcode-reader",
 
   data() {
-    let hints = new Map<DecodeHintType, any>();
+    
 
     return {
       isLoading: true,
