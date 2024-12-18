@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import "@zxing/library";
 import { BrowserBarcodeReader, Exception } from "@zxing/browser";
 
 export default {
