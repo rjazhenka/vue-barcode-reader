@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import "@zxing/library";
-import { BrowserBarcodeReader, Exception } from "@zxing/browser";
+
+import { BrowserBarcodeReader, Exception } from "@zxing/library";
 
 export default {
   name: "stream-barcode-reader",
@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       isLoading: true,
-      codeReader: new BrowserBarcodeReader(),
+      codeReader: new BrowserBarcodeReader(timeBetweenScansMillis=200),
       isMediaStreamAPISupported: navigator && navigator.mediaDevices && "enumerateDevices" in navigator.mediaDevices,
     };
   },
