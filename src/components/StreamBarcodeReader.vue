@@ -14,6 +14,7 @@ import { BrowserBarcodeReader, Exception, DecodeHintType } from "@zxing/library"
 let hints = new Map();
 hints.set(DecodeHintType.TRY_HARDER, true)
 hints.set(DecodeHintType.ASSUME_GS1, true)
+hints.set(DecodeHintType.PURE_BARCODE, true)
 
 export default {
   name: "stream-barcode-reader",
