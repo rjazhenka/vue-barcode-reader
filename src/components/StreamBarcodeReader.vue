@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { BrowserBarcodeReader, Exception } from "@zxing/library";
+import { BrowserBarcodeReader, Exception } from "@zxing/browser";
 
 export default {
   name: "stream-barcode-reader",
