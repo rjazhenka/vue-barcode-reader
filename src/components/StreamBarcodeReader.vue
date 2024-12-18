@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       isLoading: true,
-      codeReader: new BrowserBarcodeReader(timeBetweenScansMillis=200),
+      codeReader: new BrowserBarcodeReader(),
       isMediaStreamAPISupported: navigator && navigator.mediaDevices && "enumerateDevices" in navigator.mediaDevices,
     };
   },
